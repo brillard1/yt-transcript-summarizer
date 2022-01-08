@@ -9,3 +9,5 @@ when the user presses enter shrink the text field vertically first then horizont
 now idk how to implement actual backend but we have to first use a library/api to get transcript for that video then feed it to summarizer and get the summary
 then show the title of video, channel name, views, likes, dislikes along with the summary.
 except the title, and summary keep everything in a side content box (less distractive)
+
+okay maybe it would be a good idea to make this an app there's no app as such rn
