@@ -13,7 +13,6 @@ graphviz==0.8.4
 idna==2.6
 joblib==1.1.0
 lxml==4.8.0
-mxnet==1.7.0.post2
 nltk==3.7
 numpy==1.22.3
 pandas==1.4.2
