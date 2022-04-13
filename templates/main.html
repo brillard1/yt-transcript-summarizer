@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SummarYT</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo&family=Hind:wght@500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">SummarYT</h1>
+        <div class="form">
+            <!-- <div class="text-labels">
+                <div class="text">YouTube URL:</div>
+                <div class="text">Summary length:</div>
+            </div> -->
+            <form action="/summary" method = "POST" class="input">
+                <p>YouTube URL: <input type = "text" name = "URL" class="url-box"/></p>
+                <p>Summary Length: <input type="range" min="1" max="51" step="5" name="num_sentences" class="summary-length"/></p>
+                <p><input type = "submit" value = "Go!" class="submit-btn"/></p>
+            </form>
+        </div>
+        <div class="details">Developed by <a href="https://sawmill811.github.io">Soumil Sinha</a></div>
+        <div class="summary-output">{{data}}</div>
+    </div>
+</body>
+</html>
