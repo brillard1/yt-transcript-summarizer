@@ -1,13 +1,4 @@
 # yt-transcript-summarizer
 
-People are watching YouTube videos daily which can be educational, documentary or of any genre with longer length; think about how much time can be saved by creating summarized content. In this project, you will be a creating a Chrome Extension which will make a request to backend REST API where it will perform NLP and respond with a summarized version of a YouTube transcript.
-
-
-Plan:
-make a minimaslistic website that has a text field with the message (Enter youtube URL and hit enter) along with a short description of what it does below the text field
-when the user presses enter shrink the text field vertically first then horizontally and add a processing symbol (probably await in JS? idk)
-now idk how to implement actual backend but we have to first use a library/api to get transcript for that video then feed it to summarizer and get the summary
-then show the title of video, channel name, views, likes, dislikes along with the summary.
-except the title, and summary keep everything in a side content box (less distractive)
-
-okay maybe it would be a good idea to make this an app there's no app as such rn
+People are watching YouTube videos daily which can be educational, documentary or of any genre with longer length; think about how much time can be saved by creating summarized content. In this project, you will be a creating a Chrome Extension which will make a request to backend REST API where it will perform NLP and respond summarized version of YouTube transcript.<br>
+The URL is taken as input from the user. If the input URL is invalid or the transcript of the video does not exists then an error message will be displayed. The transcript is extracted from the given video using a python library then feed it to summarizer to get the summary. The lengths of the summary can me tuned with the sliding bar from which the number of sentences can be varied from 1 to 51. The website is deployed on heroku platform using the flask framework.<br>
