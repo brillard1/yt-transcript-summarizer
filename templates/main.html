@@ -13,11 +13,8 @@
 <body>
     <div class="container">
         <h1 class="title">SummarYT</h1>
+        <!-- form to enter URL as input -->
         <div class="form">
-            <!-- <div class="text-labels">
-                <div class="text">YouTube URL:</div>
-                <div class="text">Summary length:</div>
-            </div> -->
             <form action="/summary" method = "POST" class="input">
                 <p>YouTube URL: <input type = "text" name = "URL" class="url-box"/></p>
                 <p>Summary Length: <input type="range" min="1" max="51" step="5" name="num_sentences" class="summary-length"/></p>
@@ -25,6 +22,7 @@
             </form>
         </div>
         <div class="details">Developed by <a href="https://sawmill811.github.io">Soumil Sinha</a></div>
+        <!-- Summary output is displayed here -->
         <div class="summary-output" id="summ">{{data}}</div>
     </div>
 </body>
