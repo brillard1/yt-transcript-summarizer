@@ -4,15 +4,15 @@ People are watching YouTube videos daily which can be educational, documentary o
 The URL is taken as input from the user. If the input URL is invalid or the transcript of the video does not exists then an error message will be displayed. The transcript is extracted from the given video using a python library then feed it to summarizer to get the summary. The lengths of the summary can me tuned with the sliding bar from which the number of sentences can be varied from 1 to 51. The website is deployed on heroku platform using the flask framework.<br><br>
 For development purposes, follow the given steps:
 <ul>
-<li>Clone the repository using `git clone https://github.com/sawmill811/yt-transcript-summarizer.git`</li>
-<li>Create a file named `.env` with the content:
+<li>Clone the repository using <code>git clone https://github.com/sawmill811/yt-transcript-summarizer.git</code></li>
+  <li>Create a file named <code>.env</code> with the content:
 <ul>
-<li>```
+<li><code>
 FLASK_APP=app.py
 FLASK_ENV=development
-```
+  </code>
 </li>
 </ul>
 </li>
-<li>Now to run the command `flask run` to run the app in development mode.</li>
+  <li>Now to run the command <code>flask run</code> to run the app in development mode.</li>
 </ul>
