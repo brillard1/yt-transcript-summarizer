@@ -33,7 +33,10 @@ def data():
 
 def getSummary(form_data):
     url = form_data['URL'].replace("https://www.youtube.com/watch?v=", "")
-    transcript_list = YouTubeTranscriptApi.list_transcripts(url)
+    try:
+        transcript_list = YouTubeTranscriptApi.list_transcripts(url)
+    except:
+        return "Error! Video not found!"
     transcript = transcript_list.find_transcript(['en']).fetch()
     t = ""
     for i,T in enumerate(transcript):
