@@ -32,11 +32,15 @@ def data():
     return render_template('main.html', data = getSummary(form_data))
 
 def getSummary(form_data):
-    url = form_data['URL'].replace("https://www.youtube.com/watch?v=", "")
+    url1 = form_data['URL'].replace("https://www.youtube.com/watch?v=", "")
+    url2 = form_data['URL'].replace("https://youtu.be/", "")
     try:
-        transcript_list = YouTubeTranscriptApi.list_transcripts(url)
+        transcript_list = YouTubeTranscriptApi.list_transcripts(url1)
     except:
-        return "Error! Video not found!"
+        try:
+            transcript_list = YouTubeTranscriptApi.list_transcripts(url2)
+        except:
+            return "Error! Video not found!"
     transcript = transcript_list.find_transcript(['en']).fetch()
     t = ""
     for i,T in enumerate(transcript):
